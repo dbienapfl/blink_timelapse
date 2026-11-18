@@ -7,7 +7,3 @@ __pycache__/
 
 # Third-party reference project (has its own git repo)
 homebridge-blink-cameras-new-api/
-
-# Superseded generator scripts: they write the OLD, broken app.py
-setup_blink.sh
-update.sh
