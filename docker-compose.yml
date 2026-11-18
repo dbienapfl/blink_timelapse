@@ -1,0 +1,17 @@
+services:
+  blink-app:
+    build: /mnt/Random/blink
+    container_name: blink-app
+    restart: unless-stopped
+    environment:
+      - CAMERA_NAME=PTZ
+      - CAPTURE_INTERVAL=90
+    volumes:
+      - /mnt/blink:/data/blink
+      - /mnt/Random/blink/creds:/app/creds
+    networks:
+      - proxy_net
+
+networks:
+  proxy_net:
+    external: true

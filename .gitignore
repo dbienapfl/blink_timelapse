@@ -1,0 +1,13 @@
+# Secrets: Blink username/password and OAuth tokens
+creds/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Third-party reference project (has its own git repo)
+homebridge-blink-cameras-new-api/
+
+# Superseded generator scripts: they write the OLD, broken app.py
+setup_blink.sh
+update.sh
