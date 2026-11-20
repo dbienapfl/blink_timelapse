@@ -1,14 +1,17 @@
 services:
-  blink-app:
+  blink-outdoor:
     build: /mnt/Random/blink
-    container_name: blink-app
+    container_name: blink-outdoor
     restart: unless-stopped
+    ports:
+      - "8080:8080"
     environment:
-      - CAMERA_NAME=PTZ
+      - CAMERA_NAME=Timelapse
+      - SYNC_NAME=FAFO
       - CAPTURE_INTERVAL=90
     volumes:
-      - /mnt/blink:/data/blink
-      - /mnt/Random/blink/creds:/app/creds
+      - /mnt/blink-outdoor:/data/blink
+      - /mnt/Random/blink/creds-outdoor:/app/creds
     networks:
       - proxy_net
 

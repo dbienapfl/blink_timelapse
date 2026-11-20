@@ -1,5 +1,6 @@
 # Secrets: Blink username/password and OAuth tokens
 creds/
+creds-outdoor/
 
 # Python bytecode
 __pycache__/
